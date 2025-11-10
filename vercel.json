@@ -1,0 +1,13 @@
+{
+  "builds": [
+    { "src": "next.config.js", "use": "@vercel/next" },
+    { "src": "public/.well-known/apple-app-site-association", "use": "@vercel/static" }
+  ],
+  "routes": [
+    {
+      "src": "/.well-known/apple-app-site-association",
+      "dest": "/public/.well-known/apple-app-site-association",
+      "headers": { "Content-Type": "application/json" }
+    }
+  ]
+}
